@@ -273,19 +273,19 @@ The dashboard contains metric cards and charts for emotion distribution. The can
 
 
 <td align="center">
-<b>Prediction Result</b><br>
+<b>Live Interview Screen</b><br>
 <img src="screenshot/Live_interview.png" width="350">
 </td>
 </tr>
 
 <tr>
 <td align="center">
-<b>Graphs</b><br>
+<b>Dashboard Screen</b><br>
 <img src="screenshot/dashboard.png" width="350">
 </td>
 
 <td align="center">
-<b>Prediction Result</b><br>
+<b>Candidate Report</b><br>
 <img src="screenshot/report.png" width="350">
 </td>
 </tr>
