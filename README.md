@@ -262,6 +262,35 @@ The system produces the following outputs:
 
 The dashboard contains metric cards and charts for emotion distribution. The candidate report contains a summary of interview duration, engagement, confidence, emotions, and recommendation.
 
+## 📸 Screenshots
+
+<table>
+<tr>
+<td align="center">
+<b>Home Screen</b><br>
+<img src="screenshot/Upload_screen.png" width="350">
+</td>
+
+
+<td align="center">
+<b>Prediction Result</b><br>
+<img src="screenshot/Live_interview.png" width="350">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<b>Graphs</b><br>
+<img src="screenshot/dashboard.png" width="350">
+</td>
+
+<td align="center">
+<b>Prediction Result</b><br>
+<img src="screenshot/report.png" width="350">
+</td>
+</tr>
+</table>
+
 ## 14. Advantages
 
 - Easy-to-use web interface.
