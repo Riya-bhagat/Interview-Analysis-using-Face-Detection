@@ -1,23 +1,3 @@
-# Interview Analysis
-
-Streamlit application for analyzing interview videos and real-time browser camera interview sessions with face landmarks, blendshape-based emotion detection, eye contact, attention, and engagement scoring.
-
-The UI is kept in one simple `app.py` file. The analysis logic is separated into small modules so the code is easier to understand.
-
-## Run
-
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
-
-## Project Structure
-
-- `app.py` - complete Streamlit UI
-- `modules/` - face detection, emotion detection, engagement, video, live stream processing, and report generation
-- `uploads/` - sample interview video
-- `model/` - MediaPipe face landmarker model
-
 # Interview Analysis System
 
 ## 1. Abstract

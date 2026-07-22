@@ -164,5 +164,11 @@ class EngagementAnalyzer:
                 round(face_visibility,2),
 
             "engagement_score":
-                round(engagement,2)
+                round(engagement,2),
+
+            "total_frames":
+                self.total_frames,
+
+            "face_frames":
+                self.face_frames
         }

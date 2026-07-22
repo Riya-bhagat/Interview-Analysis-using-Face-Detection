@@ -1,6 +1,5 @@
 import cv2
 
-
 class VideoProcessor:
 
     def __init__(self, video_path):
@@ -14,29 +13,44 @@ class VideoProcessor:
         if not self.cap.isOpened():
             raise ValueError("Unable to open video.")
 
+        self.fps = self.cap.get(cv2.CAP_PROP_FPS)
+        self.total_frames = int(
+            self.cap.get(cv2.CAP_PROP_FRAME_COUNT)
+        )
+
+        if self.fps <= 0:
+            self.fps = 1
 
     def get_video_info(self):
         """
         Returns FPS, total frames and duration.
         """
 
-        fps = self.cap.get(cv2.CAP_PROP_FPS)
+        duration = self.total_frames / self.fps
 
-        total_frames = int(
-            self.cap.get(cv2.CAP_PROP_FRAME_COUNT)
-        )
+        return self.fps, self.total_frames, duration
 
-        duration = total_frames / fps
+    def get_video_duration(self):
+        """
+        Returns formatted video duration.
+        """
 
-        return fps, total_frames, duration
+        duration = self.total_frames / self.fps
+
+        minutes = int(duration // 60)
+
+        seconds = int(duration % 60)
+
+        return f"{minutes} min {seconds} sec"
 
 
     def extract_frames(self):
 
         frames = []
 
-        fps = int(
-            self.cap.get(cv2.CAP_PROP_FPS)
+        sample_rate = max(
+            1,
+            int(self.fps)
         )
 
         frame_number = 0
@@ -48,7 +62,7 @@ class VideoProcessor:
             if not success:
                 break
 
-            if frame_number % fps == 0:
+            if frame_number % sample_rate == 0:
                 frames.append(frame)
 
             frame_number += 1

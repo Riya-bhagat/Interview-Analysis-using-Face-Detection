@@ -146,6 +146,22 @@ class ReportGenerator:
                     "face_visibility"
                 ],
 
+            "Overall Engagement Score":
+                engagement_report[
+                    "engagement_score"
+                ],
+
+            "Analyzed Frames":
+                engagement_report.get(
+                    "total_frames",
+                    0
+                ),
+
+            "Face Detected Frames":
+                engagement_report.get(
+                    "face_frames",
+                    0
+                ),
 
             "Overall Engagement":
                 engagement,
